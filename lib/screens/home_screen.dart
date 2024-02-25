@@ -26,9 +26,15 @@ class HomeScreen extends StatelessWidget {
         future: webtoons,
         builder: (context, snapshot) {
           if (snapshot.hasData) {
-            return const Text('데이터 패칭 완료!');
+            return ListView(
+              children: [
+                for (var webtoon in snapshot.data!) Text(webtoon.title),
+              ],
+            );
           }
-          return const Text('로딩중');
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
         },
       ),
     );
