@@ -35,13 +35,15 @@ class Episode extends StatelessWidget {
             horizontal: 20,
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                episode.title,
-                style: const TextStyle(
-                  color: Colors.white,
-                  fontSize: 16,
+              Expanded(
+                child: Text(
+                  episode.title,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                  overflow: TextOverflow.ellipsis,
                 ),
               ),
               const Icon(
