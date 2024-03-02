@@ -16,6 +16,7 @@ class HomeScreen extends StatelessWidget {
         elevation: 2,
         backgroundColor: Colors.white,
         foregroundColor: Colors.green,
+        centerTitle: true,
         title: const Text(
           "오늘의 웹툰",
           style: TextStyle(
